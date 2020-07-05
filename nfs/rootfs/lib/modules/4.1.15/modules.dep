@@ -1,0 +1,11 @@
+atomic.ko:
+leddriver.ko:
+beep.ko:
+spinlock.ko:
+imx6uirq.ko:
+timer.ko:
+semaphore.ko:
+key.ko:
+tasklet.ko:
+gpioled.ko:
+leddevice.ko:
