@@ -14,7 +14,13 @@ INCUDIRS		:=  include\
 				pthread_transfer\
 				pthread_analysis\
 				pthread_client_request\
+				pthread_camera\
+				pthread_sms\
+				pthread_refresh\
+				pthread_buzzer\
+				pthread_led\
 				uart_cache\
+				sem\
 				link_list
 
 SRCDIRS			:= project\
@@ -24,7 +30,13 @@ SRCDIRS			:= project\
 				pthread_transfer\
 				pthread_analysis\
 				pthread_client_request\
+				pthread_camera\
+				pthread_sms\
+				pthread_refresh\
+				pthread_buzzer\
+				pthread_led\
 				uart_cache\
+				sem\
 				link_list
 
 

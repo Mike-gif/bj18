@@ -4,7 +4,7 @@
 #include "data_global.h"
 #include "uart_cache.h"
 #include "sqlite_link_list.h"
-#include <stdio.h>
+
 
 extern unsigned char dev_led_mask;
 extern unsigned char dev_camera_mask;

@@ -11,6 +11,10 @@ char center_phone[12] = "0";
 
 int msgid;
 int dev_uart_fd;
+int dev_camera_fd;
+int dev_sms_fd;
+int dev_buzzer_fd;
+int dev_led_fd;
 
 /**** sqlite module ****/
 int storageNum;
@@ -23,6 +27,8 @@ unsigned char dev_sms_cmd;
 unsigned char dev_led_mask;
 unsigned char dev_buzzer_mask;
 unsigned char dev_camera_mask;
+unsigned char dev_uart_mask;
+
 
 slinklist slinkHead, slinkTail;
 

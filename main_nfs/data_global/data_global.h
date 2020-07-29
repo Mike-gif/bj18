@@ -25,8 +25,11 @@
 #include <unistd.h>
 #include <linux/input.h>
 
+#define DEV_GPRS 			"/dev/ttyUSB0"
 #define DEV_ZIGBEE 			"/dev/ttyUSB1"
 #define SQLITE_OPEN			"/warehouse.db"
+#define DEV_BUZZER			"/dev/event2"
+#define DEV_CAMERA			"/tmp/webcam"
 
 #define STORAGE_NUM 		5
 
@@ -38,6 +41,15 @@
 #define SMS_BRE			4
 #define SMS_STRNO1		0
 #define SMS_STRNO2		1<<7
+
+#define SMS_MSG_TEM1	0
+#define SMS_MSG_BRE1	1
+#define SMS_MSG_ILL1	2
+#define SMS_MSG_HUM1	3
+#define SMS_MSG_TEM2	4
+#define SMS_MSG_BRE2	5
+#define SMS_MSG_ILL2	6
+#define SMS_MSG_HUM2	7
 
 #define QUEUE_MSG_LEN		32
 
@@ -80,6 +92,11 @@
 extern void *pthread_sqlite (void *);			//数据库线程
 extern void *pthread_analysis (void *);			//数据解析线程
 extern void *pthread_transfer (void *);			//数据接收线程
+extern void *pthread_buzzer (void *);			//蜂鸣器控制线程
+extern void *pthread_led (void *);				//LED控制线程
+extern void *pthread_camera (void *);			//摄像头线程
+extern void *pthread_sms (void *);				//发送短信线程
+extern void *pthread_refresh (void *);	//共享内存数据刷新线程
 
 extern void *pthread_client_request (void *);	//接收CGI，QT请求
 
